@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>中小企業補助資格登記｜完整測試站</title>
+    <meta name="description" content="中小企業政府補助免費資格初審登記，查詢可申請補助種類、預估可獲收入，線上填表自動收確認信">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors:{
+                        primary:'#0070C0',
+                        secondary:'#16A34A',
+                        danger:'#DC2626',
+                        light:'#F3F4F6',
+                        dark:'#1F2937'
+                    },
+                    fontFamily:{chinese:['PingFang TC','Microsoft JhengHei','sans-serif']}
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .card-hover{transition:all .3s ease}
+            .card-hover:hover{transform:translateY(-8px);box-shadow:0 12px 24px rgba(0,0,0,.1)}
+        }
+    </style>
+</head>
+<body class="font-chinese bg-gray-50 text-dark">
+    <!--頂部導航欄-->
+    <nav class="bg-white shadow-lg fixed w-full top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center gap-2">
+                <i class="fas fa-hand-holding-heart text-primary text-2xl"></i>
+                <span class="font-bold text-xl">企業補助申請服務平台</span>
+            </div>
+            <a href="#register" class="bg-primary text-white px-6 py-2 rounded-lg hover:bg-blue-700">立即登記補助</a>
+        </div>
+    </nav>
+
+    <!--首屏橫幅-->
+    <section class="bg-gradient-to-br from-primary to-blue-800 text-white pt-24 pb-16 px-4">
+        <div class="max-w-7xl mx-auto py-12">
+            <h1 class="text-4xl lg:text-5xl font-bold mb-4">政府補助免費資格初審</h1>
+            <p class="text-xl text-blue-100 mb-6">免費評估企業可申請補助項目、預估補助收入金額，線上填表自動接收確認郵件，24小時內專員回覆</p>
+            <div class="flex gap-4 flex-wrap">
+                <a href="#income" class="bg-yellow-400 text-dark px-6 py-3 rounded-lg font-bold hover:bg-yellow-500">查看補助收入類型</a>
+                <a href="#register" class="border-2 border-white px-6 py-3 rounded-lg font-bold hover:bg-white hover:text-primary">立即填單申請</a>
+            </div>
+        </div>
+    </section>
+
+    <!--企業可申請補助收入/收益板塊-->
+    <section id="income" class="py-16 bg-white px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-3">企業可獲得的補助收入與配套權益</h2>
+                <p class="text-gray-600">覆蓋經營、研發、設備、人才多場景，補助款無需償還，直接增加企業營收淨收益</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="card-hover bg-light p-8 rounded-xl">
+                    <div class="text-secondary text-3xl mb-4"><i class="fas fa-coins"></i></div>
+                    <h3 class="text-xl font-bold mb-2">設備採購補助</h3>
+                    <p class="text-gray-600">補助新設備採購30%~50%花費，減少固定資產投入成本，節省現金流</p>
+                </div>
+                <div class="card-hover bg-light p-8 rounded-xl">
+                    <div class="text-secondary text-3xl mb-4"><i class="fas fa-flask"></i></div>
+                    <h3 class="text-xl font-bold mb-2">研發創新補助</h3>
+                    <p class="text-gray-600">新產品研發、技術升級可申請專項補助，單案補助金最高可達數百萬</p>
+                </div>
+                <div class="card-hover bg-light p-8 rounded-xl">
+                    <div class="text-secondary text-3xl mb-4"><i class="fas fa-user-friends"></i></div>
+                    <h3 class="text-xl font-bold mb-2">人才聘用補助</h3>
+                    <p class="text-gray-600">聘用本地員工、專業技術人才可按月領取補貼，降低人力開支</p>
+                </div>
+                <div class="card-hover bg-light p-8 rounded-xl">
+                    <div class="text-secondary text-3xl mb-4"><i class="fas fa-store"></i></div>
+                    <h3 class="text-xl font-bold mb-2">門市營運補助</h3>
+                    <p class="text-gray-600">實體店家裝修、數位轉型、線上拓店均可申請對應營運補助金</p>
+                </div>
+                <div class="card-hover bg-light p-8 rounded-xl">
+                    <div class="text-secondary text-3xl mb-4"><i class="fas fa-percent"></i></div>
+                    <h3 class="text-xl font-bold mb-2">稅務減免收益</h3>
+                    <p class="text-gray-600">符合資格可申請營業稅、營所稅減免，每年節省可觀稅務支出</p>
+                </div>
+                <div class="card-hover bg-light p-8 rounded-xl">
+                    <div class="text-secondary text-3xl mb-4"><i class="fas fa-handshake"></i></div>
+                    <h3 class="text-xl font-bold mb-2">低息融資配套</h3>
+                    <p class="text-gray-600">補助通過企業可申請政府擔保低息貸款，減少融資利息成本</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--獲客模式對比板塊-->
+    <section class="py-16 bg-gray-50 px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-3">線上被動獲客 vs 傳統人工開發對比</h2>
+                <p class="text-gray-600">搭建申請頁面長期引流，穩定收企業諮詢訂單，拓寬服務收入來源</p>
+            </div>
+            <div class="overflow-x-auto">
+                <table class="w-full bg-white rounded-xl shadow-lg">
+                    <thead class="bg-primary text-white">
+                        <tr>
+                            <th class="px-6 py-4 text-left">對比維度</th>
+                            <th class="px-6 py-4 text-center">線上填表被動獲客</th>
+                            <th class="px-6 py-4 text-center">傳統逐戶拜訪開發</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y">
+                        <tr class="hover:bg-gray-50">
+                            <td class="px-6 py-4">客戶精準度</td>
+                            <td class="px-6 py-4 text-center text-secondary font-medium">高，主動填單意向明確</td>
+                            <td class="px-6 py-4 text-center">低，無效聯繫居多</td>
+                        </tr>
+                        <tr class="hover:bg-gray-50">
+                            <td class="px-6 py-4">人力成本</td>
+                            <td class="px-6 py-4 text-center text-secondary font-medium">低，只需處理填表線索</td>
+                            <td class="px-6 py-4 text-center">高，需大量業務外勤</td>
+                        </tr>
+                        <tr class="hover:bg-gray-50">
+                            <td class="px-6 py-4">長期收益</td>
+                            <td class="px-6 py-4 text-center text-secondary font-medium">頁面持續引流累積客群</td>
+                            <td class="px-6 py-4 text-center">開發結束就停止獲客</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!--底部填表欄（保留核心填資訊區域）-->
+    <section id="register" class="py-16 bg-primary px-4">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-8">
+                <h2 class="text-3xl font-bold text-white mb-3">立即填寫企業資訊 免費初審資格</h2>
+                <p class="text-blue-100">提交後自動發送確認信件，專員核算可申請補助收入，24小時內回覆</p>
+            </div>
+            <div class="bg-white rounded-xl p-8 shadow-2xl">
+                <form id="applyForm" class="space-y-5">
+                    <div>
+                        <label class="block text-gray-700 font-medium mb-2">公司統一編號</label>
+                        <input type="text" name="taxId" required class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:border-primary outline-none" placeholder="填寫8位統一編號">
+                    </div>
+                    <div>
+                        <label class="block text-gray-700 font-medium mb-2">公司完整名稱</label>
+                        <input type="text" name="companyName" required class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:border-primary outline-none" placeholder="填寫工商登記全名">
+                    </div>
+                    <div>
+                        <label class="block text-gray-700 font-medium mb-2">聯絡收件信箱</label>
+                        <input type="email" name="contactEmail" required class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:border-primary outline-none" placeholder="用來接收自動確認信">
+                    </div>
+                    <label class="flex items-start gap-2 text-gray-600 text-sm cursor-pointer">
+                        <input type="checkbox" name="privacyAgree" required class="mt-1">
+                        <span>同意提交資料只用於補助諮詢核算，遵守台灣《個人資料保護法》，不會對外轉售</span>
+                    </label>
+                    <button type="submit" class="w-full bg-primary text-white py-3 rounded-lg font-bold text-lg hover:bg-blue-700 transition">提交登記資訊</button>
+                    <p class="text-sm text-gray-500 text-center">🔒提交成功即寄出確認郵件，未收到可查看垃圾信件匣</p>
+                </form>
+                <div id="tipBox" class="hidden mt-4 p-4 rounded-lg text-center"></div>
+            </div>
+        </div>
+    </section>
+
+    <!--頁腳-->
+    <footer class="bg-dark text-white py-6 text-center text-gray-400">
+        <p>©2026 企業補助申請服務平台｜測試版本，實際補助金額以官方審核結果為準</p>
+    </footer>
+
+    <script>
+        //預覽交互，接入PHP接口替換fetch程式碼即可實現自動發信
+        const form=document.getElementById('applyForm'),tip=document.getElementById('tipBox');
+        form.addEventListener('submit',e=>{
+            e.preventDefault();
+            tip.classList.remove('hidden');
+            tip.className='mt-4 p-4 rounded-lg text-center bg-green-50 text-green-600';
+            tip.innerText='頁面預覽正常，部署PHP後端即可開啟自動發送確認郵件功能';
+        })
+        //平滑跳轉錨點
+        document.querySelectorAll('a[href^="#"]').forEach(btn=>{
+            btn.addEventListener('click',e=>{
+                e.preventDefault();
+                document.querySelector(btn.getAttribute('href')).scrollIntoView({behavior:'smooth'});
+            })
+        })
+    </script>
+</body>
+</html>
